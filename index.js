@@ -1,5 +1,4 @@
 class BaseClass {
-  // eslint-disable-next-line space-before-function-paren
   constructor (...args) {
     const keys = Object.keys(this.args)
 
@@ -26,7 +25,7 @@ class BaseClass {
         case 'string':
         case 'number':
         case 'boolean':
-          if (typeof arg !== type) { // eslint-disable-line valid-typeof
+          if (typeof arg !== type) {
             throw new TypeError(`The argument ${idx + 1} ('${key}') must be '${instance && instance.name}' type!!!`)
           }
           break
@@ -74,10 +73,11 @@ class BaseClass {
     }, {}))
   }
 
-  // eslint-disable-next-line space-before-function-paren
-  get args () { // eslint-disable-line class-methods-use-this
+  get args () {
     return {}
   }
 }
 
-export default BaseClass // eslint-disable-line import/no-default-export
+export default BaseClass
+
+module.exports = BaseClass

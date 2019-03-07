@@ -64,4 +64,4 @@ class Transaction extends BaseClass {
 module.exports = Transaction
 ```
 
-The types compare is enabled with array OR-operator syntax.
+The types compare is enabled with array OR-operator syntax support.

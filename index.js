@@ -6,8 +6,8 @@ class BaseClass {
       throw new Error(`The ${this.constructor.name} constructor must receive at least ${keys.length} argument${keys.length > 1 && 's'}!!!`)
     }
 
-    const validateType = (arg, key, idx, instance) => {
-      const type = instance && instance.name ? instance.name.toLowerCase() : 'object'
+    const validateType = (arg, key, idx, value) => {
+      const type = value && value.name ? value.name.toLowerCase() : 'object'
 
       switch (typeof arg) {
         case 'array':
@@ -17,8 +17,8 @@ class BaseClass {
           break
 
         case 'object':
-          if (!(arg instanceof instance || arg.constructor.name === instance.name)) {
-            throw new TypeError(`The argument ${idx + 1} ('${key}') must be '${instance.name}' type!!!`)
+          if (!(arg instanceof value || arg.constructor.name === value.name)) {
+            throw new TypeError(`The argument ${idx + 1} ('${key}') must be '${value.name}' type!!!`)
           }
           break
 
@@ -26,7 +26,7 @@ class BaseClass {
         case 'number':
         case 'boolean':
           if (typeof arg !== type) {
-            throw new TypeError(`The argument ${idx + 1} ('${key}') must be '${instance && instance.name}' type!!!`)
+            throw new TypeError(`The argument ${idx + 1} ('${key}') must be '${value && value.name}' type!!!`)
           }
           break
 
@@ -38,17 +38,17 @@ class BaseClass {
       const key = keys[idx]
 
       if (typeof key !== 'undefined') {
-        const instance = this.args[key]
+        const value = this.args[key]
 
-        if (typeof instance === 'function') {
-          validateType(arg, key, idx, instance)
+        if (typeof value === 'function') {
+          validateType(arg, key, idx, value)
         }
 
-        if (Array.isArray(instance)) {
+        if (Array.isArray(value)) {
           let pass = false
           let err = null
 
-          instance.forEach((inst) => {
+          value.forEach((inst) => {
             try {
               validateType(arg, key, idx, inst)
               pass = true

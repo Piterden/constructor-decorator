@@ -1,0 +1,21 @@
+{
+  "name": "constructor-decorator",
+  "version": "0.0.1",
+  "description": "Typized constructor arguments for JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "decorations",
+    "typed",
+    "runtime",
+    "assing"
+  ],
+  "author": "Denis Efremov <efremov.a.denis@gmail.ru>",
+  "license": "MIT",
+  "devDependencies": {
+    "@atomix/eslint-config": "^6.4.0",
+    "eslint": "^5.15.1"
+  }
+}

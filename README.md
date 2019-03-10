@@ -7,29 +7,29 @@ Typized and autoassigned arguments for JS class constructor.
 Are you not tired of constantly writing like:
 
 ```js
-class Transaction {
+class TypedEntity {
   constructor (
-    wallet,
-    explorer,
-    txid,
-    direction,
-    recepient,
-    amount,
-    datetime,
-    confirmations
+    foo,
+    bar,
+    baz,
+    bat,
+    fie,
+    bal,
+    fuu,
+    faa
   ) {
-    this.txid = txid
-    this.amount = amount
-    this.wallet = wallet
-    this.datetime = datetime
-    this.explorer = explorer
-    this.direction = direction
-    this.recepient = recepient
-    this.confirmations = confirmations
+    this.baz = baz
+    this.bal = bal
+    this.foo = foo
+    this.fuu = fuu
+    this.bar = bar
+    this.bat = bat
+    this.fie = fie
+    this.faa = faa
   }
 }
 
-module.exports = Transaction
+module.exports = TypedEntity
 ```
 
 Now you can avoid of it with the class extend:
@@ -45,14 +45,14 @@ const Baz = require('./Baz')
 class TypedEntity extends BaseClass {
   get args () {
     return {
-      wallet: [Foo, Bar],
-      explorer: [Baz, String],
-      txid: String,
-      direction: Boolean,
-      recepient: String,
-      amount: [String, Number],
-      datetime: Date,
-      confirmations: Number,
+      foo: [Foo, Baz],
+      bar: [Bar, String],
+      baz: String,
+      bat: Boolean,
+      fie: String,
+      bal: [String, Number],
+      fuu: Date,
+      faa: Number,
     }
   }
 

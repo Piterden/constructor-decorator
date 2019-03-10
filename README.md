@@ -37,16 +37,16 @@ Now you can avoid of it with the class extend:
 ```js
 const BaseClass = require('constructor-decorator')
 
-const Coin = require('./Coin')
-const Token = require('./Token')
-const Explorer = require('./Explorer')
+const Foo = require('./Foo')
+const Bar = require('./Bar')
+const Baz = require('./Baz')
 
 
-class Transaction extends BaseClass {
+class TypedEntity extends BaseClass {
   get args () {
     return {
-      wallet: [Coin, Token],
-      explorer: [Explorer, String],
+      wallet: [Foo, Bar],
+      explorer: [Baz, String],
       txid: String,
       direction: Boolean,
       recepient: String,
@@ -61,7 +61,7 @@ class Transaction extends BaseClass {
   }
 }
 
-module.exports = Transaction
+module.exports = TypedEntity
 ```
 
-The types compare is enabled with array OR-operator syntax support.
+The types compare is enabled with an array OR-operator syntax support.

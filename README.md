@@ -1,6 +1,6 @@
 # Constructor Decorator
 
-[![Build Status](https://travis-ci.com/Piterden/constructor-decorator.svg?branch=master)](https://travis-ci.com/Piterden/constructor-decorator?style=for-the-badge) ![npm](https://img.shields.io/npm/dt/constructor-decorator.svg?style=for-the-badge) ![NPM](https://img.shields.io/npm/l/constructor-decorator.svg?style=for-the-badge) ![npm](https://img.shields.io/npm/v/constructor-decorator.svg?style=for-the-badge)
+![Travis (.com)](https://img.shields.io/travis/com/Piterden/constructor-decorator.svg?style=for-the-badge) ![npm](https://img.shields.io/npm/dt/constructor-decorator.svg?style=for-the-badge) ![NPM](https://img.shields.io/npm/l/constructor-decorator.svg?style=for-the-badge) ![npm](https://img.shields.io/npm/v/constructor-decorator.svg?style=for-the-badge)
 
 Typized and autoassigned arguments for JS class constructor.
 

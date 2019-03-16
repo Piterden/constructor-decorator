@@ -4,6 +4,7 @@
   "description": "Typized and autoassigned constructor arguments for JS",
   "main": "index.js",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

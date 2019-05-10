@@ -10,12 +10,6 @@ class BaseClass {
       const type = value && value.name ? value.name.toLowerCase() : 'object'
 
       switch (typeof arg) {
-        case 'array':
-          if (!Array.isArray(arg)) {
-            throw new TypeError(`The argument ${idx + 1} ('${key}') must be 'Array' type!!!`)
-          }
-          break
-
         case 'object':
           if (!(arg instanceof value || arg.constructor.name === value.name)) {
             throw new TypeError(`The argument ${idx + 1} ('${key}') must be '${value.name}' type!!!`)

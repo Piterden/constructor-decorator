@@ -1,4 +1,6 @@
-extends: '@atomix'
+root: true
+extends:
+  - '@atomix'
 rules:
   no-console: 0
   valid-typeof: 0

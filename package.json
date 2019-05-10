@@ -20,7 +20,7 @@
     "url": "https://github.com/Piterden/constructor-decorator.git"
   },
   "devDependencies": {
-    "@atomix/eslint-config": "^6.4.0",
-    "eslint": "^5.15.1"
+    "@atomix/eslint-config": "^7.1.0",
+    "eslint": "^5.16.0"
   }
 }

@@ -1,4 +1,4 @@
-extends: '@atomix/eslint-config'
+extends: '@atomix'
 rules:
   no-console: 0
   valid-typeof: 0

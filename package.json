@@ -1,6 +1,6 @@
 {
   "name": "constructor-decorator",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Typized and autoassigned constructor arguments for JS",
   "main": "index.js",
   "scripts": {
